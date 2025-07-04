@@ -6,6 +6,7 @@ export default function MyToggleBox({color}) {
   const bg700 = {
     "blue" : "bg-blue-700" ,
     "orange" : "bg-orange-700" ,
+    "lime" : "bg-lime-700"
   }
 
   const handleShow = () => {
@@ -14,7 +15,9 @@ export default function MyToggleBox({color}) {
 
   return (
     <div className={`w-full flex flex-col justify-center items-center 
-                    ${isShow && bg700[color]}
+                    ${isShow && bg700[color]
+                    
+                    }
                     p-5`}>
       <TailButtonLine caption={color}
                       color = "gray"
