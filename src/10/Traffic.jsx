@@ -87,7 +87,7 @@ export default function Traffic() {
         selc={selC1}
         setSelC={setSelC1} />}
 
-      {c2 && <TrafficNav title="사고유형"
+      {c2 && <TrafficNav title="중분류"
         ct={c2}
         selc={selC2}
         setSelC={setSelC2} />}
