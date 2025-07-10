@@ -1,30 +1,28 @@
 import TailButtonLine from "../component/TailButtonLine"
 import { useState } from "react"
 export default function MyToggleBox({color}) {
-  const [isShow, setIsShow] = useState(false) ;
-
-  const bg700 = {
-    "blue" : "bg-blue-700" ,
-    "orange" : "bg-orange-700" ,
-    "lime" : "bg-lime-700"
+  const [flag, setFlag] = useState(false) ;
+  const bg = {
+    'blue' : "bg-blue-400" ,
+    'orange' : "bg-orange-400",
+    'lime' : "bg-lime-400"
   }
-
-  const handleShow = () => {
-    setIsShow(!isShow) ;
+  const handleToggle = () => {
+    setFlag(!flag) ;
   }
-
   return (
-    <div className={`w-full flex flex-col justify-center items-center 
-                    ${isShow && bg700[color]
-                    
-                    }
-                    p-5`}>
-      <TailButtonLine caption={color}
-                      color = "gray"
-                      onClick={()=>{}} />
-      <TailButtonLine caption={`${color} Toggle`}
-                      color = {color}
-                      onClick={handleShow} />
+    <div className={`w-9/10 h-60
+                    flex flex-col justify-center items-center
+                    ${flag  &&  bg[color]}`}>
+      
+       <div className={`font-bold text-2xl
+                      ${flag ? "text-white" : "text-black"} 
+                        mb-10`}>
+          {color} 
+       </div>
+       <TailButtonLine caption="blue Toggle"
+                        color = {color}
+                        onHandle={handleToggle} />
     </div>
   )
 }

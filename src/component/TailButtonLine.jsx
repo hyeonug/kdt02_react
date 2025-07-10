@@ -1,30 +1,29 @@
 
-export default function TailButtonLine({caption, color, onClick}) {
-  const border400 = {
-    "blue" : "border-blue-400",
-    "orange" : "border-orange-400",
-    "lime" : "border-lime-400",
-    "gray" : "border-gray-400",
-  }
-  const bg100 = {
-    "blue" : "bg-blue-100" ,
-    "orange" : "bg-orange-100" ,
-    "lime" : "border-lime-100",
-    "gray" : "bg-white",
+export default function TailButtonLine({caption, color, onHandle}) {
+  const bg = {
+    "blue" : "bg-blue-100",
+    "orange" : "bg-orange-100",
+    "lime" : "bg-lime-100"
   }
 
   const bgHover = {
-    "blue" : "hover:bg-blue-400" ,
-    "orange" : "hover:bg-orange-400" ,
-    "lime" : "hover:bg-lime-400",
-    "gray" : "",
+    "blue" : "hover:bg-blue-600",
+    "orange" : "hover:bg-orange-600",
+    "lime" : "hover:bg-lime-600"
   }
+
+  const bgBorder = {
+    "blue" : "border-blue-600",
+    "orange" : "border-orange-600",
+    "lime" : "border-lime-600"
+  }
+
   return (
-    <button className={`border ${border400[color]} rounded-md
-                        text-lg font-bold p-5 m-2
-                        ${bg100[color]} ${bgHover[color]}
-                        ${color !== "gray" && "hover:text-white"}`}
-            onClick={onClick}>
+    <button className={`mx-2 p-4 rounded-xl text-black font-bold
+                        border ${bgBorder[color]}
+                       hover:cursor-pointer hover:font-bold
+                      ${bg[color]}`}
+            onClick={onHandle}>
       {caption}
     </button>
   )

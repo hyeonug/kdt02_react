@@ -24,7 +24,7 @@ export default function FoodCard({item}) {
           <h1 className="text-2xl font-bold">
             {item["사업장명"]}
           </h1>
-          <h2 className="text-xl text-gray-600">
+          <h2 className="text-lg font-bold text-gray-600">
             {item["운영주체명"]}        
           </h2>
           <p className="h-12 w-full text-left text-small text-gray-400">

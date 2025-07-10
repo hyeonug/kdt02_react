@@ -13,11 +13,19 @@ import MyEffect from './08/MyEffect'
 import BoxOffice from './09/BoxOffice'
 import Traffic from './10/Traffic'
 import MyRef from './11/MyRef'
+import Gallery from './12/Gallery'
+import Festival from './13/Festival'
+import Fcst from './15/Fcst'
+import FcstList from './15/FcstList'
+// import RouteMain from './14/RouteMain'
 
+import AppNav from './AppNav'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
    
   return ( 
+    <BrowserRouter>
     <div className="w-full xl:w-8/10 h-screen mx-auto
                     flex flex-col justify-start items-start
                    ">
@@ -28,20 +36,31 @@ function App() {
           <img src={reactLogo} alt="react" /> + 
           <img src="/vite.svg" alt="vite" />
         </div>
+        <AppNav />
         <GroupText />
       </header>
       <main className="w-full flex-grow
                        overflow-y-auto py-10
                        flex flex-col justify-start items-center">
-        <BoxOffice/>
-       
+        <Routes>
+          <Route path='/' element={<MyClock />} />
+          <Route path='/lotto' element={<Lotto />} />
+          <Route path='/food' element={<FoodMain />} />
+          <Route path='/box' element={<BoxOffice />} />
+          <Route path='/traffic' element={<Traffic />} />
+          <Route path='/gallery' element={<Gallery />} />
+          <Route path='/festival' element={<Festival />} />
+          <Route path='/fcst' element={<Fcst />} />
+          <Route path='/fcstlist' element={<FcstList />} />
+        </Routes>
       </main>
       <footer className="w-full min-h-20
                         bg-black text-white
                          flex justify-center items-center">
         K-digital 2025 2기 FrontEnd
       </footer>
-    </div>   
+    </div> 
+    </BrowserRouter>  
   )
 }
 

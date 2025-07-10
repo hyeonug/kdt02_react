@@ -1,17 +1,17 @@
-import MyListItem from "./MyListItem"
-import MyListData from "./MyListData.json"
+import MyListData from './MyListData.json'
+import MyListItem from './MyListItem'
+
 export default function MyList() {
-  let show = true ;
-  let tags = MyListData.map( item => <MyListItem 
-                                      key={item.title}
-                                      title={item.title} 
-                                      imgUrl={item.imgUrl} 
-                                      content={item.content}
-                                      show={show} />) ;
-  
+  console.log(MyListData)
   return (
-    <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 px-10 lg:px-2">
-       {tags}
+    <div className="w-8/10 grid grid-cols-1 xl:grid-cols-2 gap-4">
+      {
+        MyListData.map(item => 
+          <MyListItem key={item.title}
+                      title={item.title} 
+                      imgUrl={item.imgUrl} 
+                      content={item.content} />)
+      }
     </div>
   )
 }
