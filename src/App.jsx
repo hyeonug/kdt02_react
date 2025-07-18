@@ -17,6 +17,7 @@ import Gallery from './12/Gallery'
 import Festival from './13/Festival'
 import Fcst from './15/Fcst'
 import FcstList from './15/FcstList'
+import MyDivMain from './17/MyDivMain'
 // import RouteMain from './14/RouteMain'
 
 import AppNav from './AppNav'
@@ -52,6 +53,7 @@ function App() {
           <Route path='/festival' element={<Festival />} />
           <Route path='/fcst' element={<Fcst />} />
           <Route path='/fcstlist' element={<FcstList />} />
+          <Route path='/mydivmain' element={<MyDivMain/>}/>
         </Routes>
       </main>
       <footer className="w-full min-h-20
