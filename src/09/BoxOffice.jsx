@@ -16,7 +16,7 @@ export default function BoxOffice() {
   const getFetchData = async () => {
     const apikey = import.meta.env.VITE_MV_API;
     const dt = yRef.current.value.replaceAll('-','');
-    let url = `http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=${apikey}&targetDt=${dt}`;
+    let url = `https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=${apikey}&targetDt=${dt}`;
 
     const resp = await fetch(url);
     const data = await resp.json();
@@ -73,7 +73,7 @@ export default function BoxOffice() {
     <div className="w-9/10">
       <div className="w-full relative overflow-x-auto shadow-md sm:rounded-lg">
         <div className="w-full flex justify-end mb-2">
-          <labe for="dt" className='p-4 ps-10 text-lime-800 font-bold' >날짜선택</labe>
+          <label for="dt" className='p-4 ps-10 text-lime-800 font-bold' >날짜선택</label>
           <input type="date"  id="dt"
                  className="block p-4 ps-10 text-sm text-gray-900 border border-lime-300 rounded-lg bg-lime-50 focus:ring-blue-500 focus:border-blue-500"
                  ref={yRef} 
