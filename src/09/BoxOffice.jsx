@@ -73,7 +73,7 @@ export default function BoxOffice() {
     <div className="w-9/10">
       <div className="w-full relative overflow-x-auto shadow-md sm:rounded-lg">
         <div className="w-full flex justify-end mb-2">
-          <label for="dt" className='p-4 ps-10 text-lime-800 font-bold' >날짜선택</label>
+          <labe for="dt" className='p-4 ps-10 text-lime-800 font-bold' >날짜선택</labe>
           <input type="date"  id="dt"
                  className="block p-4 ps-10 text-sm text-gray-900 border border-lime-300 rounded-lg bg-lime-50 focus:ring-blue-500 focus:border-blue-500"
                  ref={yRef} 

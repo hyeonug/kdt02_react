@@ -7,8 +7,8 @@ export default function MyDiv2(props) {
                     flex flex-col items-center
                     p-10 text-2xl
                     text-white font-bold">
-      <div className="w-[90%] flex justify-start mb-5">
-
+      <div className = "w-9/10 flex justify-start
+                        mb-5"> 
         {props.a} <CgChevronRight className="text-4xl"/> {props.b}
       </div>
       <MyDiv3 x={props.a} y={props.b} z={props.c} />

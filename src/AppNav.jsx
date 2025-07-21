@@ -50,16 +50,16 @@ export default function AppNav() {
           일기예보 
         </div>
       </Link>
-      <Link to="/mydivmain">
+      <Link to="/mydiv">
         <div className="p-2 m-2 font-bold hover:bg-amber-200  hover:border
                         text-amber-700 rounded bg-amber-50">
           전역상태변수 
         </div>
       </Link>
-      <Link to="/evchargerlist">
+      <Link to="/charger">
         <div className="p-2 m-2 font-bold hover:bg-amber-200  hover:border
                         text-amber-700 rounded bg-amber-50">
-          전기차 
+          전기차충전소 
         </div>
       </Link>
     </div>

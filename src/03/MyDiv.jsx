@@ -9,8 +9,8 @@ export default function MyDiv() {
                     flex flex-col items-center
                     p-10 text-2xl
                     text-white font-bold">
-      <div className="w-[90%] flex justify-start mb-5">
-
+      <div className = "w-9/10 flex justify-start
+                        mb-5"> 
         {x}
       </div>
       <MyDiv2 a={x} b={y} c={z} />

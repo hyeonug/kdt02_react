@@ -29,7 +29,7 @@ export default function Gallery() {
     e.preventDefault();
     kwRef.current.value = '' ;
     kwRef.current.focus();
-   
+    setTag([]);
   }
 
   useEffect(() => {

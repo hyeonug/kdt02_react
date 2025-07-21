@@ -17,9 +17,9 @@ import Gallery from './12/Gallery'
 import Festival from './13/Festival'
 import Fcst from './15/Fcst'
 import FcstList from './15/FcstList'
-import MyDivMain from './17/MyDivMain'
-import EvChargerList from './18/EvChargerList'
 // import RouteMain from './14/RouteMain'
+import MyDivMain from './17/MyDivMain'
+import ChargerInfo from './18/ChargerInfo'
 
 import AppNav from './AppNav'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -54,8 +54,8 @@ function App() {
           <Route path='/festival' element={<Festival />} />
           <Route path='/fcst' element={<Fcst />} />
           <Route path='/fcstlist' element={<FcstList />} />
-          <Route path='/mydivmain' element={<MyDivMain/>}/>
-          <Route path='/evchargerlist' element={<EvChargerList/>}/>
+          <Route path='/mydiv' element={<MyDivMain />} />
+          <Route path='/charger' element={<ChargerInfo />} />
         </Routes>
       </main>
       <footer className="w-full min-h-20
